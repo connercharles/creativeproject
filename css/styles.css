@@ -1,0 +1,92 @@
+/* all */
+body, html {
+    height: 100%;
+}
+
+.pics{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20rem;
+    margin-bottom: 10px;
+}
+
+hr{
+    border-color: black;
+    border-width: thick;
+}
+
+.hidden{
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+
+/* index */
+.top{
+
+    height: 50%;
+}
+
+.top h1{
+    padding-top: 8rem;
+    color: white;
+    text-align: center;
+}
+
+#head{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/dictionary.jpg');
+}
+
+
+
+
+/* a */
+#head-a{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/a.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.top p{
+    color: white;
+    text-align: center;
+}
+
+.examples{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#pic1{
+    background-image: url('../images/abacus.jpg');
+}
+
+.hidden span{
+    visibility: hidden;
+}
+
+.hidden:hover span{
+    visibility: visible;
+    font-weight: bolder;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+}
+
+#pic2{
+    background-image: url('../images/abyss.jpg');
+}
+
+#pic3{
+    background-image: url('../images/aisle.jpg');
+}
+
+#pic4{
+    background-image: url('../images/ardvark.png');
+}
+
+/* b */
+/* c */
