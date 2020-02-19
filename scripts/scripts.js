@@ -1,16 +1,47 @@
-function loadPhoto(e) {
+
+
+APIKEY = 'b808b10200a5810961b51f206717131de4283dc9'
+
+
+function onClick(e) {
     e.preventDefault();
-    // get form values
-    let pic1 = Math.floor(Math.random() * 100) + 200;
-    let pic2 = Math.floor(Math.random() * 100) + 200;
-    let pic3 = Math.floor(Math.random() * 100) + 200;
-    let pic4 = Math.floor(Math.random() * 100) + 200;
-    
-    document.getElementById('pic1g').style.backgroundImage = "url(http://placegoat.com/" + pic1 + ")";
-    document.getElementById('pic2g').style.backgroundImage = "url(http://placegoat.com/" + pic2 + ")";
-    document.getElementById('pic3g').style.backgroundImage = "url(http://placegoat.com/" + pic3 + ")";
-    document.getElementById('pic4g').style.backgroundImage = "url(http://placegoat.com/" + pic4 + ")";
+
+    let word = document.getElementById('word').value;
+
+    // setup URL
+    let url = "https://cors-anywhere.herokuapp.com/https://owlbot.info/api/v4/dictionary/" + word + "?format=json"
+    // call API
+    fetch(url, {
+        headers: {'Authorization': 'Token ' + APIKEY}
+    })
+    .then(function(response) {
+        debugger
+        // make sure the request was successful
+        if (response.status == 200) {
+            return response.json();
+        } else {
+            return {
+                text: "Error! Try a different word."
+            }
+        }
+    }).then(function(json) {
+        if (json.text){
+            document.getElementById('result').style.backgroundImage = "";
+            document.getElementById('result').textContent = json.text;
+        }
+
+        let def = json.definitions[0].definition;
+        let pic = json.definitions[0].image_url;
+        
+        if (pic != null){
+            document.getElementById('result').style.backgroundImage = "url(" + pic+ ")";
+            document.getElementById('result').textContent = "";
+        } else{
+            document.getElementById('result').style.backgroundImage = "";
+            document.getElementById('result').textContent = def;
+        }
+});
 }
 
-document.getElementById('get').addEventListener('click', loadPhoto);
-  
+document.getElementById('search').addEventListener('click', onClick);
+

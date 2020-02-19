@@ -150,7 +150,11 @@ hr{
 }
 
 /* g */
-#btn-wrap{
+#wrap{
     text-align: center;
+}
+
+#wrap form{
     padding-top: 1rem;
+    padding-bottom: 1rem;    
 }
