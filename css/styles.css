@@ -22,47 +22,11 @@ hr{
     padding-bottom: 8rem;
 }
 
-
-/* index */
-.top{
-
-    height: 50%;
-}
-
-.top h1{
-    padding-top: 8rem;
-    color: white;
-    text-align: center;
-}
-
-#head{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/dictionary.jpg');
-}
-
-
-
-
-/* a */
-#head-a{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/a.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.top p{
-    color: white;
-    text-align: center;
-}
-
 .examples{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-#pic1{
-    background-image: url('../images/abacus.jpg');
-}
 
 .hidden span{
     visibility: hidden;
@@ -76,17 +40,117 @@ hr{
     color: white;
 }
 
-#pic2{
+/* index */
+.top{
+    height: 20rem;
+}
+
+.top h1{
+    padding-top: 8rem;
+    color: white;
+    text-align: center;
+}
+
+.top p{
+    color: white;
+    text-align: center;
+}
+
+#head{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/dictionary.jpg');
+}
+
+.welcome-text{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+/* a */
+.subtext{
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 2rem;
+}
+
+#head-a{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/a.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#pic1a{
+    background-image: url('../images/abacus.jpg');
+}
+
+#pic2a{
     background-image: url('../images/abyss.jpg');
 }
 
-#pic3{
+#pic3a{
     background-image: url('../images/aisle.jpg');
 }
 
-#pic4{
+#pic4a{
     background-image: url('../images/ardvark.png');
 }
 
 /* b */
+#head-b{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/b.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#pic1b{
+    background-image: url('../images/bail.jpg');
+}
+
+#pic2b{
+    background-image: url('../images/beard.jpg');
+    grid-area: 1 / 2 / 3 / 3;
+    height: 40rem;
+}
+
+#pic3b{
+    background-image: url('../images/bush.jpg');
+}
+
+
 /* c */
+#head-c{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/c.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#pic1c{
+    background-image: url('../images/cage.jpg');
+    background-size: contain;
+    height: 40rem;
+}
+
+#pic1c-wrapper{
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#pic2c{
+    background-image: url('../images/calm.jpg');
+}
+
+#pic3c{
+    background-image: url('../images/chief.jpg');
+}
+
+#cred{
+    font-size: smaller;
+}
+
+/* g */
+#btn-wrap{
+    text-align: center;
+    padding-top: 1rem;
+}
